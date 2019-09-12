@@ -33,7 +33,7 @@ namespace NumberGuessingGame
                 Console.WriteLine("Input your guess and press 'return'");
                 userGuess = int.Parse(Console.ReadLine());
 
-                Console.WriteLine($"You guessed {userGuess}");
+                //Console.WriteLine($"You guessed {userGuess}");
 
                 if (secretNumber > userGuess)
                 {
@@ -64,7 +64,12 @@ namespace NumberGuessingGame
 
             } while (secretNumber != userGuess);
 
-            if (secretNumber == userGuess)
+            if (secretNumber == userGuess && timesGuessed == 0)
+            {
+                Console.WriteLine("Woah you guessed it right on the first try...are you me?");
+            }
+
+            else if (secretNumber == userGuess)
             {
                 Console.WriteLine("You guessed correctly! Congrats!");
             }
