@@ -33,8 +33,6 @@ namespace NumberGuessingGame
                 Console.WriteLine("Input your guess and press 'return'");
                 userGuess = int.Parse(Console.ReadLine());
 
-                //Console.WriteLine($"You guessed {userGuess}");
-
                 if (secretNumber > userGuess)
                 {
                     timesGuessed++;
